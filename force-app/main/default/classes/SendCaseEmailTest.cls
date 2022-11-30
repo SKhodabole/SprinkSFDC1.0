@@ -121,11 +121,7 @@ public class SendCaseEmailTest {
         SendCaseEmail.caseEmail(new list<SendCaseEmail.caseEmailVariables> {mailVariables});
         SendArtworkBounceCaseEmail.caseEmail(new list<SendArtworkBounceCaseEmail.caseEmailVariables> {EmailVariables});
         List<EmailMessage> emails = new List<EmailMessage>([Select Id from EmailMessage WHERE ParentId = :cs.Id]);
-          EscalationAlertForPaymentSuccessful.caseEmailVariables  Variables = new EscalationAlertForPaymentSuccessful.caseEmailVariables();
-         Variables.emailBody = 'Test Email Body';
-        Variables.emailSubject = 'Test Email Subject';
-        Variables.emailTo = new list<string> {'kuldeep.sonvane@thinqloud.com'};
-             EscalationAlertForPaymentSuccessful.caseEmail(new list<EscalationAlertForPaymentSuccessful.caseEmailVariables> {Variables});
+        
         //Assert that the List contains 1 record.
         
         //system.assertEquals(1, emails.size());

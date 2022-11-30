@@ -8,7 +8,7 @@ global class SendArtworkBounceCaseEmail {
         List<Messaging.EmailFileAttachment> emailFileAttachments = new List<Messaging.EmailFileAttachment>(); 
         //Loop through caseEmailVariables List
         
-        Map<Id,user> usermap = new Map<Id,user> ([SELECT Id,Name,Email FROm User]);
+        
         // To attach file to email -- Ticket 372
         Set<String> contentDocumentIds = new Set<String>(); 
         if(emailInputs[0].AttchmentCheckbox == true){
